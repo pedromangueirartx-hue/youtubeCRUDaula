@@ -1,0 +1,192 @@
+/* =========================================
+   TEMA YOUTUBE - CRUD COMPLETO
+   ========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #0f0f0f;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+header, nav, .navbar {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e5e5e5;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+h1, h2, h3 {
+    color: #0f0f0f;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+h1 {
+    color: #ff0000;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+h1::before {
+    content: "▶";
+    font-size: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #065fd4;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: #004ba0;
+    text-decoration: underline;
+}
+
+nav a, .navbar a {
+    color: #0f0f0f;
+    margin: 0 10px;
+}
+
+nav a:hover, .navbar a:hover {
+    color: #ff0000;
+    text-decoration: none;
+}
+
+main, .container, section, .card {
+    width: 100%;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e5e5e5;
+}
+
+.auth-card {
+    max-width: 450px;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+.full-width { grid-column: span 2; }
+
+label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #606060;
+    margin-bottom: 5px;
+    display: block;
+    text-align: left;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-size: 15px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus {
+    outline: none;
+    border-color: #065fd4;
+    box-shadow: 0 0 0 1px #065fd4;
+}
+
+button, input[type="submit"] {
+    background-color: #ff0000;
+    color: #ffffff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    width: 100%;
+    margin: 10px auto 0 auto;
+    display: block;
+}
+
+button:hover, input[type="submit"]:hover {
+    background-color: #cc0000;
+}
+
+.btn-edit {
+    background-color: #065fd4;
+    width: auto;
+    display: inline-block;
+    padding: 8px 15px;
+    margin: 0;
+}
+.btn-edit:hover { background-color: #004ba0; }
+
+.btn-disabled {
+    background-color: #cccccc !important;
+    color: #666 !important;
+    cursor: not-allowed;
+    width: auto;
+    display: inline-block;
+    padding: 8px 15px;
+    margin: 0;
+}
+
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.search-box input { flex: 1; }
+.search-box button { width: auto; margin: 0; }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+}
+
+th, td {
+    padding: 14px 15px;
+    text-align: left;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+th { background-color: #f1f1f1; color: #606060; font-weight: 500; }
+td { color: #0f0f0f; }
+td button { font-size: 14px; padding: 8px 12px; width: auto; margin: 0; }

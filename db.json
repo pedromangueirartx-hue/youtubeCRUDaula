@@ -1,0 +1,32 @@
+{
+  "usuarios": [
+    {
+      "id": "1",
+      "nome": "Admin",
+      "sobrenome": "YouTube",
+      "cpf": "00000000000",
+      "telefone": "11999999999",
+      "email": "admin@youtube.com",
+      "senha": "123",
+      "rua": "Av. Principal",
+      "cep": "00000-000",
+      "cidade": "São Paulo",
+      "estado": "SP",
+      "isAdmin": true
+    },
+    {
+      "nome": "Pedro",
+      "sobrenome": "macaci",
+      "cpf": "423424244",
+      "telefone": "11 999999999",
+      "email": "pedromcc@gmail.com",
+      "senha": "123",
+      "rua": "Rua do amor",
+      "cep": "00000000",
+      "cidade": "Mogi",
+      "estado": "SP",
+      "isAdmin": false,
+      "id": "dF5Mcda"
+    }
+  ]
+}

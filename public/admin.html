@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>YouTube - Painel Admin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>YouTube Admin</h1>
+        <nav><a href="index.html">Início</a> <a href="#" onclick="sair()">Sair</a></nav>
+    </header>
+    <div class="container">
+        <h2>Administração de Usuários</h2>
+        <div class="search-box">
+            <input type="text" id="buscaCpf" placeholder="Buscar usuário por CPF...">
+            <button onclick="buscarPorCpf()">Buscar</button>
+            <button onclick="carregarUsuarios()" class="btn-edit">Limpar</button>
+        </div>
+        <table>
+            <thead><tr><th>Nome</th><th>CPF</th><th>E-mail</th><th>Ações</th></tr></thead>
+            <tbody id="tabelaUsuarios"></tbody>
+        </table>
+    </div>
+    <div id="editSecao" class="container" style="display: none; margin-top: 20px;">
+        <h3>Editar Usuário</h3>
+        <form class="form-grid" onsubmit="event.preventDefault(); salvarEdicao();">
+            <input type="hidden" id="editId">
+            <div><label>Nome:</label><input type="text" id="editNome" required></div>
+            <div><label>CPF:</label><input type="text" id="editCpf" required></div>
+            <div class="full-width"><label>E-mail:</label><input type="email" id="editEmail" required></div>
+            <div class="full-width" style="display: flex; gap: 10px; flex-direction: row;">
+                <button type="submit" class="btn-edit">Salvar Alterações</button>
+                <button type="button" onclick="cancelarEdicao()" style="background-color: #606060;">Cancelar</button>
+            </div>
+        </form>
+    </div>
+    <script src="admin.js"></script>
+</body>
+</html>
